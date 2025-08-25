@@ -1,5 +1,6 @@
-# makes a stable entrypoint for Gunicorn on Azure
-try:
-    from application import app  # if your Flask instance is named "app"
-except ImportError:
-    from application import application as app  # if it's named "application"
+# entrypoint for Gunicorn on Azure
+from app import app           
+application = app              
+
+if __name__ == "__main__":
+    app.run()
