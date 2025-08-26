@@ -1,18 +1,18 @@
 app = None
 
 try:
-    from app import app as _app
+    from app import app as _app         
     app = _app
 except Exception:
     try:
-        from application import app as _app
+        from application import app as _app   
         app = _app
     except Exception:
         try:
-            from application import application as _app
+            from application import application as _app  
             app = _app
         except Exception:
-            from application import create_app
+            from application import create_app           
             app = create_app()
 
 application = app
